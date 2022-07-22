@@ -27,36 +27,36 @@ export default function Login() {
     } else {
 
       // TODO #2: disable below 4 line codes, and enable below fetch method to call your login URL
-      if (username === 'demo' && password === 'demo') {
-        navigate('/table')
-      } else {
-        setShowError(true)
-      }
+//       if (username === 'demo' && password === 'demo') {
+//         navigate('/table')
+//       } else {
+//         setShowError(true)
+//       }
 
-      // fetch(LOGIN_URL, {
-      //   method: 'POST',
-      //   mode: 'cors',
-      //   cache: 'no-cache',
-      //   credentials: 'same-origin',
-      //   headers: {
-      //     'Content-Type': 'application/json'
-      //   },
-      //   redirect: 'follow',
-      //   referrerPolicy: 'no-referrer',
-      //   body: JSON.stringify({
-      //     username: username,
-      //     password: password,
-      //   })
-      // })
-      // .then(response => response.json())
-      // .then(data => {
-      //   if (data.accessToken) {
-      //     navigate('/table')
-      //   } else {
-      //     setShowError(true)
-      //   }
-      // })
-      // .catch(() => setShowError(true))
+      fetch(LOGIN_URL, {
+        method: 'POST',
+        mode: 'cors',
+        cache: 'no-cache',
+        credentials: 'same-origin',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        redirect: 'follow',
+        referrerPolicy: 'no-referrer',
+        body: JSON.stringify({
+          username: username,
+          password: password,
+        })
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.accessToken) {
+          navigate('/table')
+        } else {
+          setShowError(true)
+        }
+      })
+      .catch(() => setShowError(true))
 
     }
   }
