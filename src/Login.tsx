@@ -9,7 +9,7 @@ import Button from '@mui/material/Button'
 import Chip from '@mui/material/Chip'
 
 // TODO #1: replace this link with your deployment lambda web app login
-const LOGIN_URL = 'http://localhost:5001/login'
+const LOGIN_URL = 'https://j0r6pefju8.execute-api.us-east-2.amazonaws.com/Prod'
 
 
 export default function Login() {
@@ -44,8 +44,8 @@ export default function Login() {
         redirect: 'follow',
         referrerPolicy: 'no-referrer',
         body: JSON.stringify({
-          username: username,
-          password: password,
+          username: demo,
+          password: demo,
         })
       })
       .then(response => response.json())
