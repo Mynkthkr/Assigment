@@ -44,8 +44,8 @@ export default function Login() {
         redirect: 'follow',
         referrerPolicy: 'no-referrer',
         body: JSON.stringify({
-          username: demo,
-          password: demo,
+          username: username,
+          password: password,
         })
       })
       .then(response => response.json())
