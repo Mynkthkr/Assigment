@@ -26,12 +26,12 @@ export default function Login() {
       setCheckInput(true)
     } else {
 
-      // TODO #2: disable below 4 line codes, and enable below fetch method to call your login URL
-//       if (username === 'demo' && password === 'demo') {
-//         navigate('/table')
-//       } else {
-//         setShowError(true)
-//       }
+//     TODO #2: disable below 4 line codes, and enable below fetch method to call your login URL
+       if (username === 'demo' && password === 'demo') {
+         navigate('/table')
+       } else {
+         setShowError(true)
+       }
 
       fetch(LOGIN_URL, {
         method: 'POST',
